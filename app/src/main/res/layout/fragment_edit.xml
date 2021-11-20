@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutBack"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:alpha="0.1"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ConstraintLayoutTop"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.3"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/nameageTV2"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayoutBack"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayoutBack"
+            app:layout_constraintTop_toTopOf="@+id/nameTV2">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/nameTV2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/name"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ageTV2"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayoutBack"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayoutBack" />
+
+        <TextView
+            android:id="@+id/nameageTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/name_age_preview"
+            android:textColor="#5A5A5A"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/ageTV2"
+            app:layout_constraintTop_toBottomOf="@+id/ageTV2" />
+
+        <TextView
+            android:id="@+id/nameageTV2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#5A5A5A"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/nameageTV"
+            app:layout_constraintTop_toBottomOf="@+id/nameageTV" />
+
+        <TextView
+            android:id="@+id/ageTV2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/age"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/nameTV2"
+            app:layout_constraintTop_toBottomOf="@+id/nameTV2" />
+
+        <EditText
+            android:id="@+id/nameET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/nameTV2"
+            app:layout_constraintStart_toEndOf="@+id/nameTV2"
+            app:layout_constraintTop_toTopOf="@+id/nameTV2" />
+
+        <EditText
+            android:id="@+id/ageET"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:ems="10"
+            android:hint="18"
+            android:inputType="number"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ageTV2"
+            app:layout_constraintStart_toEndOf="@+id/ageTV2"
+            app:layout_constraintTop_toTopOf="@+id/ageTV2" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/black"
+            android:text="@string/saveButton"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayoutBack"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayoutBack"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayoutBack" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
