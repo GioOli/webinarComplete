@@ -12,18 +12,18 @@ import kotlin.math.log
 class MainActivity : AppCompatActivity() {
 
     //Define Variables
-    val viewFrag: Fragment = ViewFragment.newInstance()
-    val editFrag: Fragment = EditFragment.newInstance()
-    var fragContainer: FragmentContainerView? = null
+    var viewFrag: Fragment? = null
+    var editFrag: Fragment? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        viewFrag = ViewFragment.newInstance()
 
         //Start with viewFragment
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainerView, viewFrag)
+            .add(R.id.fragmentContainerView, viewFrag!!)
             .commit()
 
 
@@ -35,13 +35,15 @@ class MainActivity : AppCompatActivity() {
         //switch statement using (when)
         when(frag){
             "view" ->{
+                viewFrag = ViewFragment.newInstance()
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragmentContainerView, viewFrag)
+                    .replace(R.id.fragmentContainerView, viewFrag!!)
                     .commit()
             }
             "edit" ->{
+                editFrag = EditFragment.newInstance()
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragmentContainerView, editFrag)
+                    .replace(R.id.fragmentContainerView, editFrag!!)
                     .commit()
             }
             else ->{

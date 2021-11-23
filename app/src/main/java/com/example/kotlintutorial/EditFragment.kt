@@ -53,9 +53,11 @@ class EditFragment : Fragment() {
         ageET = view.findViewById(R.id.ageET)
         nameageTV2 = view.findViewById(R.id.nameageTV2)
         button = view.findViewById(R.id.button)
+        nameET?.setText("")
 
         //Set saved values
         nameET?.setText(dataTransport?.name)      //NAO ESTA A DAR UPDATE?????
+
         when(dataTransport?.age != -1) {
             true -> ageET?.setText(dataTransport?.age.toString())
             false -> ageET?.setText("")

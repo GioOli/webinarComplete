@@ -148,7 +148,11 @@ class ViewFragment : Fragment() {
     fun updateAndSelectUser(){
 
         selectedUser = dataTransport?.selectedUser!!
-        users[selectedUser] = dataTransport?.users?.get(selectedUser)!!
+        var i = 0
+        for(user in dataTransport?.users!!){
+            users[i] = user
+            i++
+        }
         spinner?.setSelection(selectedUser)
     }
 

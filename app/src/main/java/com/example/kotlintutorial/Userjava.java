@@ -2,9 +2,9 @@ package com.example.kotlintutorial;
 
 public class Userjava {
 
-    private String name = "None";
+    private String name = "";
     private int age = -1;
-    private String name_age = "None";
+    private String name_age = "";
 
     public String getName() {
         return name;
