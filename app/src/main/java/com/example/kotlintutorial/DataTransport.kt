@@ -13,9 +13,7 @@ data class DataTransport(var selectedUser: Int = 0,
     //Constructor
     init {
         //Verify if user array is empty, if so, populate
-        Log.d(null, "VERIFYING IF ITS NULL")
         if(users.isNullOrEmpty()){
-            Log.d(null, "ITTTTTTSNULLLLLLLLLLLLLLLLL")
             users.add(User())
             users.add(User())
             users.add(User())
